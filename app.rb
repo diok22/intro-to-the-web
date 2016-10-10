@@ -9,5 +9,6 @@ get '/secret' do
 end
 
 get '/cat' do
-  erb(:index)
+  @array_name = ["Amingo", "Oscar", "Vking"].sample
+  erb (:index)
 end
