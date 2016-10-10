@@ -8,7 +8,13 @@ get '/secret' do
   "puts something"
 end
 
-get '/cat' do
+get '/random-cat' do
   @array_name = ["Amingo", "Oscar", "Vking"].sample
+  erb (:index)
+end
+
+get '/named-cat' do
+  p params
+  @array_name = params[:name]
   erb (:index)
 end
